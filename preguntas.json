@@ -1,0 +1,82 @@
+[
+  {
+    "texto": "Todos los españoles son iguales ante la ley.",
+    "correcto": 14,
+    "incorrectos": [15, 20, 21]
+  },
+  {
+    "texto": "Se reconoce el derecho a la vida y a la integridad física y moral.",
+    "correcto": 15,
+    "incorrectos": [16, 17, 18]
+  },
+  {
+    "texto": "Se garantiza la libertad ideológica, religiosa y de culto.",
+    "correcto": 16,
+    "incorrectos": [14, 20, 22]
+  },
+  {
+    "texto": "Toda persona tiene derecho a la libertad y seguridad.",
+    "correcto": 17,
+    "incorrectos": [15, 19, 23]
+  },
+  {
+    "texto": "Se garantiza el derecho al honor, a la intimidad personal y familiar.",
+    "correcto": 18,
+    "incorrectos": [14, 16, 19]
+  },
+  {
+    "texto": "Los españoles tienen derecho a elegir libremente su residencia y a circular por el territorio nacional.",
+    "correcto": 19,
+    "incorrectos": [17, 18, 20]
+  },
+  {
+    "texto": "Los poderes públicos aseguran la protección social, económica y jurídica de la familia.",
+    "correcto": 20,
+    "incorrectos": [19, 14, 18]
+  },
+  {
+    "texto": "Se garantiza el derecho a la libertad de reunión pacífica.",
+    "correcto": 21,
+    "incorrectos": [22, 24, 25]
+  },
+  {
+    "texto": "Se garantiza el derecho de asociación, siempre dentro del respeto a la ley.",
+    "correcto": 22,
+    "incorrectos": [21, 18, 14]
+  },
+  {
+    "texto": "Se reconoce el derecho a participar en los asuntos públicos, directamente o por medio de representantes.",
+    "correcto": 23,
+    "incorrectos": [24, 27, 28]
+  },
+  {
+    "texto": "Los ciudadanos tienen derecho a acceder a los cargos y funciones públicas en condiciones de igualdad.",
+    "correcto": 24,
+    "incorrectos": [23, 20, 25]
+  },
+  {
+    "texto": "La participación en elecciones y referéndums está garantizada para todos los ciudadanos mayores de edad.",
+    "correcto": 25,
+    "incorrectos": [24, 22, 29]
+  },
+  {
+    "texto": "Se prohiben los tribunales de honor en el ámbito de la administración civil y de las organizaciones profesionales.",
+    "correcto": 26,
+    "incorrectos": [24, 22, 29]
+  },
+  {
+    "texto": "Se reconoce el derecho a la educación, con libertad de enseñanza.",
+    "correcto": 27,
+    "incorrectos": [26, 28, 29]
+  },
+  {
+    "texto": "El derecho a la huelga está garantizado, con ciertas limitaciones en sectores específicos.",
+    "correcto": 28,
+    "incorrectos": [27, 22, 19]
+  },
+  {
+    "texto": "El derecho a la petición individual o colectiva por escrito está garantizado.",
+    "correcto": 29,
+    "incorrectos": [17, 23, 18]
+  }
+]

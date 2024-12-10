@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConstiBoom</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div id="logo-container">
+    <img src="Logo.jpeg" alt="Logo" id="logo">
+  </div>
+  <div id="menu" class="visible">
+    <h1>ConstiBoom</h1>
+    <p><strong>Un artículo - 4 opciones</strong></p>
+    <p>Selecciona las opciones que NO correspondan al artículo.</p>
+    <button id="iniciar">¡Jugar!</button>
+  </div>
+
+  <div id="juego" class="oculto">
+    <h1>ConstiBoom</h1>
+    <div id="panel">
+      <p id="articulo"></p>
+    </div>
+    <div id="cables">
+      <button class="cable" data-articulo=""></button>
+      <button class="cable" data-articulo=""></button>
+      <button class="cable" data-articulo=""></button>
+      <button class="cable" data-articulo=""></button>
+    </div>
+    <div id="contador">
+      <p id="contadorPregunta"></p>
+    </div>    
+    <center>
+      <div id="bomba-container">
+        <div id="bomba">
+          <div class="corona"></div>
+          <div class="pie izquierdo"></div>
+          <div class="pie derecho"></div>
+        </div>
+      </div>       
+    </center>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

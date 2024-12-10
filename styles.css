@@ -1,0 +1,231 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura total de la ventana */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #333;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Fondo.png') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.5; /* Ajusta la opacidad del fondo */
+  z-index: -1; /* Coloca el fondo detrás del contenido */
+}
+
+/* Logo en la esquina superior derecha */
+#logo-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#logo {
+  width: 250px; /* Ajusta el tamaño del logo */
+  height: auto;
+  border-radius: 10%;
+}
+
+#menu, #juego {
+  width: 100%;
+  max-width: 500px; /* Opcional: Para limitar el ancho del contenido */
+}
+
+
+h1 {
+  font-size: 5rem;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 1.1rem;
+  color: black;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff7f50;
+}
+
+.visible {
+  display: block;
+}
+
+.oculto {
+  display: none;
+}
+
+#panel {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#cables {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cable {
+  background-color: #ff6f61;
+  font-size: 1rem;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.cable:hover {
+  transform: scale(1.1);
+}
+
+.cable:disabled {
+  cursor: not-allowed;
+}
+
+.cable.activo {
+  transform: scale(1.1);
+  background-color: #ff9f43;
+  animation: parpadeo 0.5s infinite alternate;
+}
+
+/* Efecto de parpadeo cuando se corta un cable incorrecto */
+@keyframes parpadeo {
+  0%, 100% {
+    background-color: #333;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 50px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    background-color: #ff0000;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 1), 0 0 80px rgba(255, 0, 0, 0.8);
+  }
+}
+
+.parpadeo {
+  animation: parpadeo 0.5s ease-in-out;
+}
+
+
+/* Estilo para el contenedor de la bomba */
+#bomba-container {
+  display: flex;
+  margin-right: -110px;
+  justify-content: center; /* Centra horizontalmente */
+  margin-top: 30px; /* Espacio superior respecto al contenido */
+}
+
+#bomba {
+  width: 100px; /* Tamaño del cuerpo de la bomba */
+  height: 100px;
+  background: #000; /* Color negro para la bomba */
+  border-radius: 50%; /* Hacerla circular */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: respirar 2s infinite;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+/* Ojos de la bomba */
+#bomba::before,
+#bomba::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  top: 30px;
+}
+
+#bomba::before {
+  left: 30px; /* Ojo izquierdo */
+}
+
+#bomba::after {
+  right: 30px; /* Ojo derecho */
+}
+
+/* Pies de la bomba */
+#bomba .pie {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  background: #ffcc00; /* Color amarillo para los pies */
+  border-radius: 50%;
+  bottom: -15px;
+}
+
+#bomba .pie.izquierdo {
+  left: 15px;
+}
+
+#bomba .pie.derecho {
+  right: 15px;
+}
+
+/* Corona del Rey Bob-omb */
+#bomba .corona {
+  position: absolute;
+  top: -15px;
+  width: 60px;
+  height: 30px;
+  background: #ffcc00;
+  clip-path: polygon(50% 0%, 75% 100%, 100% 0%, 50% 100%, 0% 0%, 25% 100%);
+}
+
+/* Animación de respiración */
+@keyframes respirar {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+    text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
